@@ -1,8 +1,12 @@
 <h1> Jen Ellis</h1>
+<h3>Graphic Designer</h3>
 
 <% @posts.each do |post| %>
 <h2><%= link_to post.title, post_path(post) %></h2>
 <p> <%= post.description %></p>
 
+<% end %>
 
+<% if user_signed_in? %>
+<%= link_to 'New Post', new_post_path, class:"btn btn-default" %>
 <% end %>

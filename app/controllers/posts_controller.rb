@@ -10,11 +10,11 @@ class PostsController < ApplicationController
   end
   
   def new
-    @post = Post.new
+    @post = current_user.posts.build
   end
   
   def create
-    @post = Post.new(post_params)
+    @post = current_user.posts.build(post_params)
     if @post.save
       redirect_to root_path
     else
@@ -34,11 +34,13 @@ class PostsController < ApplicationController
   end
   
   def destroy
+    @post.destroy
+    redirect_to root_path
   end
 
 private
 def post_params
-  params.require(:post).permit(:title,:description)
+  params.require(:post).permit(:title,:description,:post_img)
 end
 
 def find_post
