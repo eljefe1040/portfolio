@@ -1,12 +1,26 @@
-<h1> Jen Ellis</h1>
-<h3>Graphic Designer</h3>
+<!-- <div class="container">
+  <div class="jumbotron">
+    <h1>Jen Ellis</h1> 
+    <p>Designer, Creater, Illustrator.....</p> 
+  </div>
+ </div> -->
 
+<div class="row">
 <% @posts.each do |post| %>
-<h2><%= link_to post.title, post_path(post) %></h2>
-<p> <%= post.description %></p>
+<div class="col-md-4 col-sml-6 col-xs-12">
+    <a href="/posts/<%= post.id %>">
+      <%= image_tag post.post_img.url(:post_index), class:"post-index"  %>
+    </a>
+</div>
 
 <% end %>
+</div>
 
+
+<br>
+<br>
 <% if user_signed_in? %>
 <%= link_to 'New Post', new_post_path, class:"btn btn-default" %>
 <% end %>
+
+</div>
