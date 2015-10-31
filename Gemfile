@@ -13,6 +13,7 @@ gem 'bootstrap-sass', '~> 3.3.5.1'
 gem 'simple_form', '~> 3.2.0'
 gem 'devise', '~> 3.5.2'
 gem 'paperclip', '~> 4.3.1'
+gem 'pg'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
@@ -40,8 +41,8 @@ group :development, :test do
   gem 'web-console', '~> 2.0'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
-  # Use sqlite3 as the database for Active Record
-  gem 'sqlite3'
   
 end
+  
+
 
