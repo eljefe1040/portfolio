@@ -14,6 +14,7 @@ gem 'simple_form', '~> 3.2.0'
 gem 'devise', '~> 3.5.2'
 gem 'paperclip', '~> 4.3.1'
 gem 'pg'
+gem 'puma', '~> 2.14'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
