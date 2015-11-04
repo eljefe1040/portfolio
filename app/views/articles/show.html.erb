@@ -1,0 +1,14 @@
+<div class="col-md-6 col-md-offset-3 col col-sm-8 col-sm-offset-2 col-xs-12" >
+	<div class="well">
+		<h2><%= @article.title%></h2>
+		<p class="time-posted">Post written <%= time_ago_in_words(@article.created_at)%> ago</p>
+		<br>
+		<p><%= @article.body %></p>
+	</div>
+	<br>
+	<%= link_to 'Back', articles_path, class:"btn btn-default"%>
+	<% if user_signed_in? %>
+	<%= link_to 'Edit', edit_article_path(@article),class:"btn btn-default" %>
+	<%= link_to 'Delete', article_path(@article), method: :delete, data: {confirm: "Are you sure?"}, class:"btn btn-default"%>
+	<%end%>
+</div>

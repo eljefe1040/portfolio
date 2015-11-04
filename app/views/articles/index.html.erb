@@ -1,0 +1,18 @@
+
+<br>
+<br>
+<div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-12">	
+	<% @articles.each do |article| %>
+	<div class="well">
+		<h2><%= link_to article.title, article_path(article), class:"article-links" %></h2>
+		<p class="time-posted">Post written <%= time_ago_in_words(article.created_at)%> ago</p>
+		<br>
+		<p><%= article.body%></p>
+	</div>
+	<%end%>
+	<br>
+	<br>
+		<% if user_signed_in? %>
+		<%= link_to 'New Post', new_article_path, class:"btn btn-default" %>
+		<% end %>
+</div>	
