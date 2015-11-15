@@ -13,7 +13,7 @@ development:
   <<: *default
   username: traceyc
   database: traceyc_developement2
-  password: 'cooper2337'
+  password: ''
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -22,7 +22,7 @@ test:
   <<: *default
   database: traceyc_test2
   username: traceyc
-  password: 'cooper2337'
+  password: ''
 
 production:
   <<: *default
